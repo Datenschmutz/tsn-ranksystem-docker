@@ -1,0 +1,7 @@
+.idea
+.vscode
+.env
+*.swp
+logs
+configs
+ranksystem-db

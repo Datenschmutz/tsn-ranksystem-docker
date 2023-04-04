@@ -1,0 +1,21 @@
+version: '3'
+services:
+    ranksystem:
+      build: .
+      restart: always
+      ports:
+        - 8080:80
+      volumes:
+       - ./configs:/app/other
+       - ./logs:/app/logs
+
+    ranksystem-db:
+      image: mariadb:10.6
+      restart: always
+      environment:
+        MARIADB_USER: ranksystem
+        MARIADB_PASSWORD: ranksystem
+        MARIADB_ROOT_PASSWORD: root
+        MARIADB_DATABASE: ranksystem
+      volumes:
+        - ./ranksystem-db/:/var/lib/mysql
