@@ -1,10 +1,12 @@
 # Dockerized TSN Ranksystem
-This is a dockerized tsn ranksystem image for teamspeak
+This is a dockerized tsn ranksystem image for teamspeak. Feel free to use it!
 
 ## Quick Links
 * TSN-Ranksystem: [GitHub](https://github.com/Newcomer1989/TSN-Ranksystem) / [Website](https://ts-ranksystem.com/)
+* Image Repository: [Dockerhub](https://hub.docker.com/r/ocelik94/tsn-ranksystem-docker)
 
 ## Usage
+You can run the following docker-compose configuration. On first start you have to call `.../install.php` to finish the installation process.
 
 ```
 version: '3'
