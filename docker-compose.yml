@@ -6,16 +6,16 @@ services:
       ports:
         - 8080:80
       volumes:
-       - ./configs:/app/other
-       - ./logs:/app/logs
+       - ./tsn/configs:/app/other
+       - ./tsn/logs:/app/logs
 
     ranksystem-db:
       image: mariadb:10.6
       restart: always
       environment:
-        MARIADB_USER: ranksystem
-        MARIADB_PASSWORD: ranksystem
-        MARIADB_ROOT_PASSWORD: root
-        MARIADB_DATABASE: ranksystem
+        MARIADB_RANDOM_ROOT_PASSWORD: 1
+        MARIADB_USER: ${MARIADB_USER}
+        MARIADB_PASSWORD: ${MARIADB_PASSWORD}
+        MARIADB_DATABASE: ${MARIADB_DATABASE}
       volumes:
-        - ./ranksystem-db/:/var/lib/mysql
+        - ./tsn/db/:/var/lib/mysql

@@ -4,4 +4,5 @@
 *.swp
 logs
 configs
-ranksystem-db
+ranksystem
+tsn
