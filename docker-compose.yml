@@ -3,8 +3,6 @@ services:
     ranksystem:
       build: .
       restart: always
-      ports:
-        - 8080:80
       volumes:
        - ./tsn/configs:/app/other
        - ./tsn/logs:/app/logs
